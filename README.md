@@ -1,0 +1,3 @@
+- 👋 Hi, I’m @a9irba9
+- 👀 I’m interested in Python
+- 🌱 I’m currently learning and completed the internship from Upskill Campus
