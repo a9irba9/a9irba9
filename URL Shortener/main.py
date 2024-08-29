@@ -12,8 +12,8 @@ shortened_urls = {}
 logging.basicConfig(level=logging.DEBUG)
 
 # Load existing URLs from the JSON file if it exists
-if os.path.exists("urls.json"):
-    with open("urls.json", "r") as f:
+if os.path.exists("\\Python\\Projetcs\\URL Shortener\\URLS\\urls.json"):
+    with open("\\Python\\Projetcs\\URL Shortener\\URLS\\urls.json", "r") as f:
         shortened_urls = json.load(f)
     logging.debug(f"Loaded URLs from JSON: {shortened_urls}")
 
@@ -31,7 +31,7 @@ def index():
             short_url = generate_short_url()
         
         shortened_urls[short_url] = long_url
-        with open("urls.json", "w") as f:
+        with open("\\Python\\Projetcs\\URL Shortener\\URLS\\urls.json", "w") as f:
             json.dump(shortened_urls, f)
         logging.debug(f"Shortened URL: {short_url} -> {long_url}")
         return f"Shortened URL: {request.url_root}{short_url}"
