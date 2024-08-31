@@ -29,7 +29,7 @@ class QuizApp:
         """Load questions and answers from a file."""
         self.questions_and_answers = []
         try:
-            with open("questions.txt", "r") as file:
+            with open("Quiz Game\\questions.txt", "r") as file:
                 for line in file:
                     if '=' in line:
                         question, answer = line.strip().split('=', 1)
