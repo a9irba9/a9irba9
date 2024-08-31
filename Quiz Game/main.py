@@ -23,10 +23,10 @@ class QuizApp:
         self.next_button = tk.Button(root, text="Next Question", command=self.next_question)
         self.next_button.pack(pady=10)
 
-        self.next_question()  # Load the first question
+        self.next_question()
 
     def load_questions(self):
-        """Load questions and answers from a file."""
+        
         self.questions_and_answers = []
         try:
             with open("Quiz Game\\questions.txt", "r") as file:
@@ -42,10 +42,10 @@ class QuizApp:
             self.root.quit()
 
     def next_question(self):
-        """Display the next question."""
-        self.answer_entry.delete(0, tk.END)  # Clear the answer entry
+        
+        self.answer_entry.delete(0, tk.END)
         if self.questions_and_answers:
-            question, answer = random.choice(self.questions_and_answers)  # Choose a random question
+            question, answer = random.choice(self.questions_and_answers)
             self.current_question = question
             self.current_answer = answer
             self.question_label.config(text=question)
@@ -53,7 +53,7 @@ class QuizApp:
             self.question_label.config(text="No questions available.")
 
     def check_answer(self):
-        """Check the user's answer and display the result."""
+        
         user_answer = self.answer_entry.get().strip()
         if user_answer.lower() == self.current_answer.lower():
             messagebox.showinfo("Correct!", "Your answer is correct!")
