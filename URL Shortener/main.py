@@ -19,14 +19,13 @@ def generate_short_code(length=6):
 
 def save_url(original_url, short_code):
     data = {}
-    # Check if the file exists and load existing data
     if os.path.exists(json_file_path):
         with open(json_file_path, "r") as file:
             try:
                 data = json.load(file)
             except json.JSONDecodeError:
                 pass
-    shortened_url = f"http://127.0.0.1:5000/{short_code}"  # Local server address
+    shortened_url = f"http://127.0.0.1:5000/{short_code}"
     data[short_code] = {"original_url": original_url, "shortened_url": shortened_url}
 
     with open(json_file_path, "w") as file:
