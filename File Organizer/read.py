@@ -1,4 +1,4 @@
-file = open('sample.txt', 'r')
+file = open('\\File Organizer\\Files', 'r')
 content = file.read()
 file.close()
 
