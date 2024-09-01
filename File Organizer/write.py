@@ -1,4 +1,4 @@
-file = open("sample.txt", "w")
+file = open("\\File Organizer\\Files", "w")
 file.write("Hello World!")
 file.close()
 
